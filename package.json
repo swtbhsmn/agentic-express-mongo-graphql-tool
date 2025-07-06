@@ -1,0 +1,31 @@
+{
+  "name": "agentic-express-mongo-graphql-tool",
+  "version": "1.0.0",
+  "description": "A scalable, agentic-ready backend boilerplate powered by Node.js, Express, MongoDB, and GraphQL. Perfect for building AI agent APIs and modern web services with rapid development and clean architecture.",
+  "main": "dist/src/index.js",
+  "author": "Swetabh Suman <swtbhsmn@gmail.com>",
+  "license": "MIT",
+  "contributors": [
+    "Swetabh Suman (https://github.com/swtbhsmn)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swtbhsmn/agentic-express-mongo-graphql-tool"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prompt": "node dist/src/index.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "inquirer": "^12.7.0",
+    "mongoose-graphql-codegen": "^1.2.17",
+    "openai": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
