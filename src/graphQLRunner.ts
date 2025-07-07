@@ -19,7 +19,7 @@ export async function runGraphQLGeneration(baseDir: string) {
     await Promise.all(
         files.map(async (file) => {
             try {
-                await generateGraphQL(path.join(modelDir, file), false);
+                await generateGraphQL(path.join(modelDir, file), false,`${baseDir}`);
                 console.log(`✅ GraphQL generated for ${file}`);
             } catch (e) {
                 console.error(`❌ Failed for ${file}:`, e);

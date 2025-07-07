@@ -20,7 +20,7 @@ async function runGraphQLGeneration(baseDir) {
     }
     await Promise.all(files.map(async (file) => {
         try {
-            await (0, mongoose_graphql_codegen_1.generateGraphQL)(path_1.default.join(modelDir, file), false);
+            await (0, mongoose_graphql_codegen_1.generateGraphQL)(path_1.default.join(modelDir, file), false, `${baseDir}`);
             console.log(`✅ GraphQL generated for ${file}`);
         }
         catch (e) {

@@ -8,7 +8,6 @@ const generator_1 = require("./generator");
 const fileWriter_1 = require("./fileWriter");
 const graphQLRunner_1 = require("./graphQLRunner");
 const path_1 = __importDefault(require("path"));
-const moveDir_1 = require("./moveDir");
 const copyAndChangeExtension_1 = require("./copyAndChangeExtension");
 const child_process_1 = require("child_process");
 const util_1 = __importDefault(require("util"));
@@ -24,7 +23,7 @@ async function main() {
         const baseDir = path_1.default.join(process.cwd(), Object.keys(parsed)[0]?.split('/')[0]);
         console.log('\n🛠 Generating GraphQL schema from models...\n');
         await (0, graphQLRunner_1.runGraphQLGeneration)(baseDir).then(async (res) => {
-            (0, moveDir_1.moveDirectory)(`${process.cwd()}/graphql-codegen`, `${baseDir}/graphql-codegen`);
+            //moveDirectory(`${process.cwd()}/graphql-codegen`,`${baseDir}/graphql-codegen`)
             (0, copyAndChangeExtension_1.copyAndChangeExtension)(`${process.cwd()}/prerequisites/index.txt`, `${baseDir}`, 'index.ts');
             (0, copyAndChangeExtension_1.copyAndChangeExtension)(`${process.cwd()}/prerequisites/tsconfig.txt`, `${baseDir}`, 'tsconfig.json');
             await (0, setupAndRun_1.default)(baseDir);

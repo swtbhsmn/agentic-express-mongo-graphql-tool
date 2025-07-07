@@ -20,7 +20,7 @@
   "dependencies": {
     "dotenv": "^17.0.1",
     "inquirer": "^12.7.0",
-    "mongoose-graphql-codegen": "^1.2.25",
+    "mongoose-graphql-codegen": "^1.2.26",
     "openai": "^5.8.2"
   },
   "devDependencies": {

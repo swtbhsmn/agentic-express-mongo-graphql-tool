@@ -28,7 +28,7 @@ async function main() {
 
         console.log('\n🛠 Generating GraphQL schema from models...\n');
         await runGraphQLGeneration(baseDir).then(async res=>{
-            moveDirectory(`${process.cwd()}/graphql-codegen`,`${baseDir}/graphql-codegen`)
+            //moveDirectory(`${process.cwd()}/graphql-codegen`,`${baseDir}/graphql-codegen`)
             copyAndChangeExtension(`${process.cwd()}/prerequisites/index.txt`,`${baseDir}`,'index.ts')
             copyAndChangeExtension(`${process.cwd()}/prerequisites/tsconfig.txt`,`${baseDir}`,'tsconfig.json')
             await setupAndRun(baseDir)
